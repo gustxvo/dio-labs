@@ -10,6 +10,8 @@ O sistema deverá receber dois parâmetros via terminal que representarão dois 
 2. Dentro do projeto, crie a classe `Contador.java` para realizar toda a codificação do nosso programa.
 3. Dentro do projeto, crie a classe `ParametrosInvalidosException` que representará a exceção de negócio no sistema.
 
+## Código inicial
+
 Abaixo temos um trecho de código no qual você poderá seguir alterando as partes que contenham `??`
 
 ```java
