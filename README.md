@@ -10,5 +10,6 @@ A [Trilha Java](./trilha-java) é composta pelos desafios propostos para fixaç�
 - [Controle de Fluxo](./trilha-java/controle-fluxo): Projeto para exercitar as diferentes formas de Controle de Fluxo.
 - [POO](./trilha-java/poo): Aplicação dos conceitos de herança Programação Orientada a Objetos e diagrama de classes.
 - [Projeto POO](./trilha-java/projeto-poo): Reforço dos conceitos fundamentais da Programação Orientada a Objetos em um projeto.
+- [Desafio POO](./trilha-java/desafio-poo): Reforço dos conceitos de POO em outro caso de uso.
 
 ![Programming](programming.gif)
