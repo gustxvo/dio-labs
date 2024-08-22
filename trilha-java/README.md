@@ -4,4 +4,5 @@ Esse diretório é composto pelos desafios propostos para fixação de conceitos
 
 - [Entrada e saída](./input-output): Projeto para exercitar o recebimento e exibição de dados via terminal.
 - [Controle de Fluxo](./controle-fluxo): Projeto para exercitar as diferentes formas de Controle de Fluxo.
-- [POO](./poo): Aplicação dos conceitos de Programação Orientada a Objetos.
+- [POO](./poo): Aplicação dos conceitos de herança Programação Orientada a Objetos e diagrama de classes.
+- [Projeto POO](./projeto-poo): Reforço dos conceitos fundamentais da Programação Orientada a Objetos em um projeto.
