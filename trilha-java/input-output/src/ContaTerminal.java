@@ -9,7 +9,7 @@ public class ContaTerminal {
 
         System.out.printf("Olá %s, obrigado por criar uma conta em nosso banco, sua agência é %s, " +
                         "conta %d e seu saldo R$%.2f já está disponível para saque.",
-                conta.getNome(), conta.getAgencia(), conta.getNumConta(), conta.getSaldo());
+                conta.nome(), conta.agencia(), conta.numConta(), conta.saldo());
     }
 
     public static ContaPessoal cadastrarConta(Scanner scanner) {
