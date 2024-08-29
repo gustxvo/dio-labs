@@ -7,3 +7,4 @@ Esse diretório é composto pelos desafios propostos para fixação de conceitos
 - [POO](./poo): Aplicação dos conceitos de herança Programação Orientada a Objetos e diagrama de classes.
 - [Projeto POO](./projeto-poo): Reforço dos conceitos fundamentais da Programação Orientada a Objetos em um projeto.
 - [Desafio POO](./desafio-poo): Reforço dos conceitos de POO em outro caso de uso.
+- [Design Patterns](./design-patterns): Implementação de exemplos para os 3 tipos de design patterns: criacionais, estruturais e comportamentais.

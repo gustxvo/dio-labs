@@ -11,5 +11,6 @@ A [Trilha Java](./trilha-java) é composta pelos desafios propostos para fixaç�
 - [POO](./trilha-java/poo): Aplicação dos conceitos de herança Programação Orientada a Objetos e diagrama de classes.
 - [Projeto POO](./trilha-java/projeto-poo): Reforço dos conceitos fundamentais da Programação Orientada a Objetos em um projeto.
 - [Desafio POO](./trilha-java/desafio-poo): Reforço dos conceitos de POO em outro caso de uso.
+- [Design Patterns](./trilha-java/design-patterns): Implementação de exemplos para os 3 tipos de design patterns.
 
 ![Programming](programming.gif)
