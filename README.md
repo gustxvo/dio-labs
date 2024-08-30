@@ -12,5 +12,6 @@ A [Trilha Java](./trilha-java) é composta pelos desafios propostos para fixaç�
 - [Projeto POO](./trilha-java/projeto-poo): Reforço dos conceitos fundamentais da Programação Orientada a Objetos em um projeto.
 - [Desafio POO](./trilha-java/desafio-poo): Reforço dos conceitos de POO em outro caso de uso.
 - [Design Patterns](./trilha-java/design-patterns): Implementação de exemplos para os 3 tipos de design patterns.
+- [Spring Boot](./trilha-java/bootcamp-claro): Criação de uma API em Java com Spring Boot + deploy em serviço remoto.
 
 ![Programming](programming.gif)
