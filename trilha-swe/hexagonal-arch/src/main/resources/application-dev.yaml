@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://${HOST:localhost}:5432/avengers_db
+    username: postgres
+    password: password
+  jpa:
+    show-sql: true

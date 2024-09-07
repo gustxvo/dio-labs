@@ -1,3 +1,5 @@
 spring:
   application:
-  name: hexagonal-arch
+    name: hexagonal-arch
+  profiles:
+    active: dev

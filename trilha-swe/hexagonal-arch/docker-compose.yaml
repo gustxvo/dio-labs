@@ -1,0 +1,31 @@
+name: development
+services:
+  db:
+    image: postgres:alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USERNAME: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: avengers_db
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    networks:
+      - db-network
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: dev@email.com
+      PGADMIN_DEFAULT_PASSWORD: password
+    ports:
+      - "8081:80"
+    depends_on:
+      - db
+    networks:
+      - db-network
+volumes:
+  pg_data:
+    driver: local
+networks:
+  db-network:
+    driver: bridge
