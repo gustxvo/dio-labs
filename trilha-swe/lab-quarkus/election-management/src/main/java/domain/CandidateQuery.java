@@ -9,7 +9,7 @@ import java.util.Set;
 public interface CandidateQuery {
 
     Optional<Set<String>> ids();
-    Optional<Set<String>> name();
+    Optional<String> name();
 
     class Builder extends CandidateQuery_Builder {
 

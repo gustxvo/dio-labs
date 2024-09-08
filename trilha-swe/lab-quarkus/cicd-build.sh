@@ -4,7 +4,6 @@ ROOT=$(pwd)
 
 cd "$APP"
 
-export JAVA_HOME=
 ./mvnw clean
 ./mvnw versions:set -DremoveSnapshot
 APP_VERSION=$(./mvnw -q -Dexec.executable=echo -Dexec.args='${project.version}' --non-recursive exec:exec)
