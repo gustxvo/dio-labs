@@ -44,4 +44,9 @@ public class AvengerRepositoryImpl implements AvengerRepository {
         jpaRepository.deleteById(avengerId);
     }
 
+    @Override
+    public boolean nickAlreadyTaken(String nick) {
+        return jpaRepository.existsByNick(nick);
+    }
+
 }

@@ -6,4 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface AvengerJpaRepository extends JpaRepository<AvengerEntity, Long> {
+
+    boolean existsByNick(String nick);
+
 }

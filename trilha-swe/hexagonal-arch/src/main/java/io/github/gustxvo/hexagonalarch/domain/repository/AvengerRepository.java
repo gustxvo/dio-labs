@@ -16,4 +16,6 @@ public interface AvengerRepository {
     Avenger save(Avenger avenger);
 
     void deleteById(Long avengerId);
+
+    boolean nickAlreadyTaken(String nick);
 }

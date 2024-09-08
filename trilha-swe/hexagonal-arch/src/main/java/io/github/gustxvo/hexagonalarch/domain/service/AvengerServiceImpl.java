@@ -1,5 +1,7 @@
 package io.github.gustxvo.hexagonalarch.domain.service;
 
+import io.github.gustxvo.hexagonalarch.domain.exception.AvengerAlreadyExistsException;
+import io.github.gustxvo.hexagonalarch.domain.exception.AvengerNotFoundException;
 import io.github.gustxvo.hexagonalarch.domain.model.Avenger;
 import io.github.gustxvo.hexagonalarch.domain.repository.AvengerRepository;
 import lombok.RequiredArgsConstructor;
@@ -20,18 +22,21 @@ public class AvengerServiceImpl implements AvengerService {
 
     @Override
     public Avenger findById(Long avengerId) {
-        return avengerRepository.findById(avengerId).orElseThrow();
+        return avengerRepository.findById(avengerId).orElseThrow(() -> new AvengerNotFoundException(avengerId));
     }
 
     @Override
     public Avenger create(Avenger avenger) {
+        if (avengerRepository.nickAlreadyTaken(avenger.nick())) {
+            throw new AvengerAlreadyExistsException(avenger.nick());
+        }
         return avengerRepository.save(avenger);
     }
 
     @Override
     public Avenger update(Avenger avenger) {
         if (!avengerRepository.existsById(avenger.id())) {
-            throw new IllegalStateException("Avenger with id " + avenger.id() + " does not exist.");
+            throw new AvengerNotFoundException(avenger.id());
         }
         return avengerRepository.save(avenger);
     }
@@ -39,7 +44,7 @@ public class AvengerServiceImpl implements AvengerService {
     @Override
     public void deleteById(Long avengerId) {
         if (!avengerRepository.existsById(avengerId)) {
-            throw new IllegalStateException("Avenger with id " + avengerId + " does not exist.");
+            throw new AvengerNotFoundException(avengerId);
         }
         avengerRepository.deleteById(avengerId);
     }
