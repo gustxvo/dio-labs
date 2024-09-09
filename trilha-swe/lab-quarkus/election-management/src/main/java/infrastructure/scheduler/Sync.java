@@ -1,5 +1,6 @@
 package infrastructure.scheduler;
 
+import domain.annotation.Principal;
 import domain.election.Election;
 import infrastructure.repository.RedisElectionRepository;
 import infrastructure.repository.SqlElectionRepository;
@@ -12,7 +13,7 @@ public class Sync {
     private final SqlElectionRepository sqlElectionRepository;
     private final RedisElectionRepository redisElectionRepository;
 
-    public Sync(SqlElectionRepository sqlElectionRepository, RedisElectionRepository redisElectionRepository) {
+    public Sync(@Principal SqlElectionRepository sqlElectionRepository, RedisElectionRepository redisElectionRepository) {
         this.sqlElectionRepository = sqlElectionRepository;
         this.redisElectionRepository = redisElectionRepository;
     }

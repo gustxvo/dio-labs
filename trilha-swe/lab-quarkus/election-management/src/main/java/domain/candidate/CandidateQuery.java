@@ -1,6 +1,5 @@
 package domain.candidate;
 
-import domain.CandidateQuery_Builder;
 import org.inferred.freebuilder.FreeBuilder;
 
 import java.util.Optional;

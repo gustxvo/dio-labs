@@ -1,5 +1,6 @@
 package infrastructure.repository;
 
+import domain.annotation.Principal;
 import domain.candidate.Candidate;
 import domain.election.Election;
 import domain.election.ElectionRepository;
@@ -15,6 +16,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+@Principal
 @ApplicationScoped
 public class SqlElectionRepository implements ElectionRepository {
 
@@ -35,6 +37,8 @@ public class SqlElectionRepository implements ElectionRepository {
                 .map(entry -> ElectionCandidateEntity.fromDomain(election, entry.getKey(), entry.getValue()))
                 .forEach(entityManager::merge);
     }
+
+    @Override
     public List<Election> findAll() {
         Stream<Object[]> stream = entityManager.createNativeQuery("SELECT e.id AS election_id, c.id AS candidate_id, c.photo, c.given_name, c.family_name, c.email, c.phone, c.job_title, ec.votes FROM elections AS e INNER JOIN election_candidate AS ec ON ec.election_id = e.id INNER JOIN candidates AS c ON ec.candidate_id = c.id")
                 .getResultStream();

@@ -1,10 +1,6 @@
 package api;
 
-import api.dto.input.CreateCandidate;
-import api.dto.input.UpdateCandidate;
-import api.dto.output.CandidateResponse;
-import domain.candidate.Candidate;
-import domain.candidate.CandidateService;
+import api.dto.output.ElectionResponse;
 import domain.election.ElectionService;
 import jakarta.enterprise.context.ApplicationScoped;
 
@@ -22,6 +18,12 @@ public class ElectionApi {
 
     public void submit() {
         electionService.submit();
+    }
+
+    public List<ElectionResponse> findAll() {
+        return electionService.findAll().stream()
+                .map(ElectionResponse::fromDomain)
+                .toList();
     }
 
 }
