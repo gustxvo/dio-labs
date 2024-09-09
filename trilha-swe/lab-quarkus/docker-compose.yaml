@@ -46,6 +46,8 @@ services:
     labels:
       - traefik.http.routers.voting-app.rule=Host(`vote.dio.localhost`) && PathPrefix(`/api/voting`)
       - traefik.http.routers.voting-app.entrypoints=web
+    environment:
+      - QUARKUS_REDIS_HOSTS=redis://caching:6379
 
   result-app:
     extends:
