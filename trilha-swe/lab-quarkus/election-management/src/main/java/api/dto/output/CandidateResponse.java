@@ -1,7 +1,7 @@
 package api.dto.output;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import domain.Candidate;
+import domain.candidate.Candidate;
 
 import java.util.Optional;
 

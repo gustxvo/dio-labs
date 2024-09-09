@@ -1,6 +1,6 @@
 package api.dto.input;
 
-import domain.Candidate;
+import domain.candidate.Candidate;
 
 import java.util.Optional;
 

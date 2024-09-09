@@ -4,7 +4,6 @@ import api.CandidateApi;
 import api.dto.input.CreateCandidate;
 import api.dto.input.UpdateCandidate;
 import api.dto.output.CandidateResponse;
-import domain.Candidate;
 import io.quarkus.test.InjectMock;
 import io.quarkus.test.common.http.TestHTTPEndpoint;
 import io.quarkus.test.junit.QuarkusTest;

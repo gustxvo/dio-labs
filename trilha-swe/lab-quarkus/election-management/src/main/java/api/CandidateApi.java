@@ -3,12 +3,11 @@ package api;
 import api.dto.input.CreateCandidate;
 import api.dto.input.UpdateCandidate;
 import api.dto.output.CandidateResponse;
-import domain.Candidate;
-import domain.CandidateService;
+import domain.candidate.Candidate;
+import domain.candidate.CandidateService;
 import jakarta.enterprise.context.ApplicationScoped;
 
 import java.util.List;
-import java.util.stream.Stream;
 
 @ApplicationScoped
 public class CandidateApi {

@@ -4,7 +4,6 @@ import api.CandidateApi;
 import api.dto.input.CreateCandidate;
 import api.dto.input.UpdateCandidate;
 import api.dto.output.CandidateResponse;
-import domain.Candidate;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;

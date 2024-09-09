@@ -1,6 +1,6 @@
 package infrastructure.entity;
 
-import domain.Candidate;
+import domain.candidate.Candidate;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

@@ -1,5 +1,8 @@
 package domain;
 
+import domain.candidate.Candidate;
+import domain.candidate.CandidateQuery;
+import domain.candidate.CandidateRepository;
 import org.instancio.Instancio;
 import org.junit.jupiter.api.Test;
 

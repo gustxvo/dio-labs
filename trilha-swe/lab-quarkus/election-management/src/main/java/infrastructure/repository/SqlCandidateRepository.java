@@ -1,8 +1,8 @@
 package infrastructure.repository;
 
-import domain.Candidate;
-import domain.CandidateQuery;
-import domain.CandidateRepository;
+import domain.candidate.Candidate;
+import domain.candidate.CandidateQuery;
+import domain.candidate.CandidateRepository;
 import infrastructure.entity.CandidateEntity;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.persistence.EntityManager;

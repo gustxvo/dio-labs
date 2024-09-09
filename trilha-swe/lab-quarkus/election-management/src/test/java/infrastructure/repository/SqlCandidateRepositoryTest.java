@@ -1,6 +1,6 @@
 package infrastructure.repository;
 
-import domain.CandidateRepository;
+import domain.candidate.CandidateRepository;
 import domain.CandidateRepositoryTest;
 import io.quarkus.test.TestTransaction;
 import io.quarkus.test.junit.QuarkusTest;
