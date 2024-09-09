@@ -1,9 +1,11 @@
 package infrastructure.repository;
 
+import domain.candidate.Candidate;
 import domain.election.Election;
 import domain.election.ElectionRepository;
 import io.quarkus.redis.datasource.RedisDataSource;
 import io.quarkus.redis.datasource.pubsub.PubSubCommands;
+import io.quarkus.redis.datasource.sortedset.ScoreRange;
 import io.quarkus.redis.datasource.sortedset.SortedSetCommands;
 import jakarta.enterprise.context.ApplicationScoped;
 
@@ -33,4 +35,22 @@ public class RedisElectionRepository implements ElectionRepository {
         pubsub.publish("elections", election.id());
     }
 
+    public Election sync(Election election) {
+        var map = commands.zrangebyscoreWithScores("election:" + election.id(),
+                        ScoreRange.from(Integer.MIN_VALUE, Integer.MAX_VALUE))
+                .stream()
+                .map(scoredValue -> {
+                    Candidate candidate = election.votes()
+                            .keySet()
+                            .stream()
+                            .filter(c -> c.id().equals(scoredValue.value()))
+                            .findFirst()
+                            .orElseThrow();
+
+                    return Map.entry(candidate, (int) scoredValue.score());
+                })
+                .toArray(Map.Entry[]::new);
+
+        return new Election(election.id(), Map.ofEntries(map));
+    }
 }
